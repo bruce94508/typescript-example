@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "develop": "DEBUG=*,-nodemon* nodemon src/index.ts",
-    "build": "rm -rf dist && tsc -p tsconfig.prod.json",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "build_2": "rm -rf dist && tsc --build tsconfig.prod.json",
     "start": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
-  "author": "Thomas Lin",
+  "author": "Renhz",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
@@ -32,7 +33,6 @@
     "semantic-release": "^19.0.2",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
-    "tsc": "^2.0.4",
     "typescript": "^4.6.3"
   },
   "husky": {
